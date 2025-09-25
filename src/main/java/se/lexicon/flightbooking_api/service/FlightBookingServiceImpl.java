@@ -63,8 +63,8 @@ public class FlightBookingServiceImpl implements FlightBookingService {
     }
 
     @Override
-    public List<FlightBookingDTO> findBookingsByEmail(String email) {
-        return flightBookingRepository.findByPassengerEmail(email)
+    public List<FlightBookingDTO> findBookingsByEmail(String passangerEmail) {
+        return flightBookingRepository.findByPassengerEmail(passangerEmail)
                 .stream()
                 .map(mapper::toDTO)
                 .collect(Collectors.toList());
